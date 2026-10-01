@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Máquinas - Taller</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 480px; margin: 30px auto; padding: 0 16px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin: 16px 8px 0 0; padding: 8px 16px; cursor: pointer; }
+    #resultado { margin-top: 24px; padding: 12px; border: 1px solid #888; border-radius: 6px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Registro de Máquinas</h1>
+
+  <label for="nombre">Nombre de la máquina</label>
+  <input type="text" id="nombre" placeholder="Ej: Taladro 01">
+
+  <label for="tipo">Tipo de máquina</label>
+  <select id="tipo">
+    <option value="Herramienta eléctrica">Herramienta eléctrica</option>
+    <option value="Impresora 3D">Impresora 3D</option>
+    <option value="Máquina de soldar">Máquina de soldar</option>
+  </select>
+
+  <label for="horas">Horas de uso acumuladas</label>
+  <input type="number" id="horas" min="0" value="0">
+
+  <button onclick="registrarMaquina()">Registrar</button>
+  <button onclick="cambiarPagina('normas.html')">Ver Normas</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
